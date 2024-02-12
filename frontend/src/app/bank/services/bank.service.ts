@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { HttpClient } from "@angular/common/http";
-import { Transaction } from "../types/Transaction";
+import { Transaction } from "../types/tstypes/Transactionts";
 import { Observable } from "rxjs";
-import { Customer } from "../types/Customer";
+import { Customer } from "../types/tstypes/Customerts";
 import { Account } from "../types/Account";
 // import { transition } from "@angular/animations";
 
