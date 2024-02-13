@@ -7,7 +7,7 @@ import { of } from 'rxjs';
 @Component({
   selector: 'app-customers',
   templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.css'],
+  styleUrls: ['./customer.component.scss'],
 })
 export class CustomersComponent implements OnInit {
   isFormSubmitted: boolean | undefined;
