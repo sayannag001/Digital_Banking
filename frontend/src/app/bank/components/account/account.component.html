@@ -1,6 +1,7 @@
 <div>
   <form [formGroup]="accountForm" (ngSubmit)="onSubmit()">
-    
+    <label for="account_id">Account ID:</label>
+    <input type="text" id="account_id" formControlName="account_id" disabled />
 
     <label for="customer_id">Customer ID:</label>
     <input type="text" id="customer_id" formControlName="customer_id" />
@@ -11,3 +12,4 @@
     <button type="submit">Submit</button>
   </form>
 </div>
+
