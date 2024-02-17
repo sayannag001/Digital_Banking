@@ -12,9 +12,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/loans")
 public class LoanController {
-    @Autowired
-    private LoanService loanService;
+    private final LoanService loanService;
 
+    @Autowired
+    public LoanController(LoanService loanService) {
+        this.loanService = loanService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Loan>> getAllLoans() {

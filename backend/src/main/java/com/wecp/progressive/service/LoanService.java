@@ -10,17 +10,19 @@ import java.util.List;
 
 @Service
 public class LoanService {
-    @Autowired
-    private LoanRepository loanRepository;
+    private final LoanRepository loanRepository;
 
-    
+    @Autowired
+    public LoanService(LoanRepository loanRepository) {
+        this.loanRepository = loanRepository;
+    }
 
     public List<Loan> getAllLoans() {
         return loanRepository.findAll();
     }
 
     public Loan getLoanById(Long id) {
-        return loanRepository.findById(id).get();
+        return loanRepository.findById(id).orElse(null);
     }
 
     public Loan createLoan(Loan loan) {

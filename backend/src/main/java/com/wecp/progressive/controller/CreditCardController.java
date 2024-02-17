@@ -13,9 +13,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/credit-cards")
 public class CreditCardController {
-    
+    private final CreditCardService creditCardService;
+
     @Autowired
-    private CreditCardService creditCardService;
+    public CreditCardController(CreditCardService creditCardService) {
+        this.creditCardService = creditCardService;
+    }
 
     @GetMapping
     public ResponseEntity<List<CreditCard>> getAllCreditCards() {

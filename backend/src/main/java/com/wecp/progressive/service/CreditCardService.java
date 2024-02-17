@@ -10,9 +10,12 @@ import java.util.List;
 
 @Service
 public class CreditCardService {
-    @Autowired
-    private CreditCardRepository creditCardRepository;
+    private final CreditCardRepository creditCardRepository;
 
+    @Autowired
+    public CreditCardService(CreditCardRepository creditCardRepository) {
+        this.creditCardRepository = creditCardRepository;
+    }
 
     public List<CreditCard> getAllCreditCards() {
         return creditCardRepository.findAll();
