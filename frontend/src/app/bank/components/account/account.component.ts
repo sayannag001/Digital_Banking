@@ -18,37 +18,15 @@ export class AccountComponent implements OnInit {
   accountSuccess$: Observable<string>;
   isFormSubmitted: boolean = false;
   bankService: BankService;
-<<<<<<< HEAD
-  role:string|null;
-  userId:string|null;
-=======
-<<<<<<< HEAD
   role: string | null;
   userId: string | null;
-=======
-  role:string|null;
-  userId:string|null;
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
   constructor(
     private formBuilder: FormBuilder,
     private banksService: BankService
   ) {
-<<<<<<< HEAD
-  
-    this.customers$ = this.banksService.getCustomers();
-    
-=======
-<<<<<<< HEAD
 
     this.customers$ = this.banksService.getCustomers();
 
-=======
-  
-    this.customers$ = this.banksService.getCustomers();
-    
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
   }
 
   ngOnInit(): void {
@@ -56,15 +34,7 @@ export class AccountComponent implements OnInit {
       customer: ["", [Validators.required]],
       balance: ["", [Validators.required]],
     });
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
   }
 
   onSubmit() {
@@ -74,15 +44,7 @@ export class AccountComponent implements OnInit {
     if (this.accountForm.invalid) {
       return;
     } else {
-<<<<<<< HEAD
-      const formData= this.accountForm.value;
-=======
-<<<<<<< HEAD
       const formData = this.accountForm.value;
-=======
-      const formData= this.accountForm.value;
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
       console.log(formData);
       const account = new Account(formData);
       this.banksService.addAccount(account).subscribe(

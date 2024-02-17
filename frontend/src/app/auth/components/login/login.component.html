@@ -1,8 +1,5 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
     <label>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         Username:
         <input type="text" formControlName="username" />
         <p class="error" *ngIf="
@@ -35,51 +32,3 @@
         {{ error.message }}
     </div>
 </form>
-=======
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
-      Username:
-      <input type="text" formControlName="username" />
-      <p
-        class="error"
-        *ngIf="
-          loginForm.controls['username']['touched'] &&
-          loginForm.controls['username'].errors &&
-          loginForm.controls['username'].errors['required']
-        "
-      >
-      Username is required
-      </p>
-    </label>
-  
-    <label>
-      Password:
-      <input type="password" formControlName="password" />
-      <p
-        class="error"
-        *ngIf="
-          loginForm.controls['password']['touched'] &&
-          loginForm.controls['password'].errors &&
-          loginForm.controls['password'].errors['required']
-        "
-      >
-        Password is required
-      </p>
-    </label>
-  
-   
-  
-    <button type="submit">Log in</button>
-      <a routerLink="/auth/add-user" class="task-list" class="task-list"
-      >Sign up</a
-    >
-  
-    <div *ngIf="loginError$ | async as error" class="error">
-      {{ error.message }}
-    </div>
-  </form>
-<<<<<<< HEAD
-  s
-=======
-  
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef

@@ -19,15 +19,7 @@ export class CustomerComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private banksService: BankService
-<<<<<<< HEAD
-  ) {}
-=======
-<<<<<<< HEAD
   ) { }
-=======
-  ) {}
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 
   ngOnInit(): void {
     this.customerForm = this.formBuilder.group({
@@ -35,10 +27,6 @@ export class CustomerComponent implements OnInit {
       email: ["", [Validators.required]],
       username: ["", [Validators.required]],
       password: ["", [Validators.required]],
-<<<<<<< HEAD
-      role:["",[Validators.required]]
-=======
-<<<<<<< HEAD
       role: ["", [Validators.required]]
     });
   }
@@ -46,18 +34,6 @@ export class CustomerComponent implements OnInit {
     // Define a regular expression for special characters
     const specialCharactersRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
 
-=======
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
-    });
-  }
-  hasSpecialCharacters(inputString:string):boolean {
-    // Define a regular expression for special characters
-    const specialCharactersRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
-  
-<<<<<<< HEAD
-=======
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
     // Test if the inputString contains any special characters
     return specialCharactersRegex.test(inputString);
   }
@@ -69,9 +45,6 @@ export class CustomerComponent implements OnInit {
     if (this.customerForm.invalid) {
       return;
     } else {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       const data = this.customerForm.value;
       if (data.password.length < 8) {
@@ -79,56 +52,19 @@ export class CustomerComponent implements OnInit {
         return;
       }
       if (this.hasSpecialCharacters(data.username)) {
-=======
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
-      
-      const data= this.customerForm.value;
-      if(data.password.length < 8)
-      {
-        this.customerError$ = of("Password must be of 8 characters");
-        return;
-      }
-      if(this.hasSpecialCharacters(data.username))
-      {
-<<<<<<< HEAD
-=======
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
         this.customerError$ = of("User Name must consist of letter and number only!!");
         return;
       }
       console.log(emailRegex.test(data.email));
-<<<<<<< HEAD
-      if(!emailRegex.test(data.email))
-      {
-=======
-<<<<<<< HEAD
       if (!emailRegex.test(data.email)) {
-=======
-      if(!emailRegex.test(data.email))
-      {
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
         this.customerError$ = of("Invalid Email Id!!");
         return;
 
       }
       // const username = name, password = "abcd1234";
-<<<<<<< HEAD
-      const customer: Customer = 
-       new Customer(data);
-      
-=======
-<<<<<<< HEAD
       const customer: Customer =
         new Customer(data);
 
-=======
-      const customer: Customer = 
-       new Customer(data);
-      
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
       ;
       this.banksService.addCustomer(customer).subscribe(
         (res: any) => {
