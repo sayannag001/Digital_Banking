@@ -1,18 +1,7 @@
 package com.wecp.progressive.controller;
 
-<<<<<<< HEAD
-
 import com.wecp.progressive.entity.Customers;
 import com.wecp.progressive.service.CustomerLoginService;
-=======
-<<<<<<< HEAD
-import com.wecp.progressive.entity.Customers;
-import com.wecp.progressive.service.CustomerLoginService;
-=======
-
-import com.wecp.progressive.entity.Customers;
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 import com.wecp.progressive.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,16 +17,6 @@ import java.util.List;
 public class CustomerController {
 
     private final CustomerService customerService;
-<<<<<<< HEAD
-    private CustomerLoginService customerLoginService;
-    @Autowired
-    public CustomerController(@Qualifier("customerServiceImplJpa") CustomerService customerService, CustomerLoginService customerLoginService) {
-        this.customerService = customerService;
-        this.customerLoginService = customerLoginService;
-    }
-
-=======
-<<<<<<< HEAD
     private CustomerLoginService customerLoginService;
 
     @Autowired
@@ -45,14 +24,7 @@ public class CustomerController {
             CustomerLoginService customerLoginService) {
         this.customerService = customerService;
         this.customerLoginService = customerLoginService;
-=======
-
-    @Autowired
-    public CustomerController(@Qualifier("customerServiceImplJpa") CustomerService customerService) {
-        this.customerService = customerService;
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
     }
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 
     @GetMapping
     public ResponseEntity<List<Customers>> getAllCustomers() {
@@ -92,23 +64,10 @@ public class CustomerController {
     public ResponseEntity<Void> updateCustomer(@PathVariable int customerId, @RequestBody Customers customers) {
         try {
             customers.setCustomerId(customerId);
-<<<<<<< HEAD
-            
-            customerLoginService.updateUser(customers);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (Exception e) {
-=======
-<<<<<<< HEAD
 
             customerLoginService.updateUser(customers);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
-=======
-            customerService.updateCustomer(customers);
-            return new ResponseEntity<>(HttpStatus.OK);
-        } catch (SQLException e) {
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -140,12 +99,4 @@ public class CustomerController {
         List<Customers> customersList = customerService.getAllCustomersSortedByNameFromArrayList();
         return new ResponseEntity<>(customersList, HttpStatus.OK);
     }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
->>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
