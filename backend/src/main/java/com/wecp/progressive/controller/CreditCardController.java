@@ -13,9 +13,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/credit-cards")
 public class CreditCardController {
+<<<<<<< HEAD
     
     @Autowired
     private CreditCardService creditCardService;
+=======
+    private final CreditCardService creditCardService;
+
+    @Autowired
+    public CreditCardController(CreditCardService creditCardService) {
+        this.creditCardService = creditCardService;
+    }
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 
     @GetMapping
     public ResponseEntity<List<CreditCard>> getAllCreditCards() {
@@ -61,4 +70,8 @@ public class CreditCardController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef

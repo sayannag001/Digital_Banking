@@ -10,9 +10,18 @@ import java.util.List;
 
 @Service
 public class CreditCardService {
+<<<<<<< HEAD
     @Autowired
     private CreditCardRepository creditCardRepository;
 
+=======
+    private final CreditCardRepository creditCardRepository;
+
+    @Autowired
+    public CreditCardService(CreditCardRepository creditCardRepository) {
+        this.creditCardRepository = creditCardRepository;
+    }
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 
     public List<CreditCard> getAllCreditCards() {
         return creditCardRepository.findAll();
@@ -33,4 +42,8 @@ public class CreditCardService {
     public void deleteCreditCard(Long id) {
         creditCardRepository.deleteById(id);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef

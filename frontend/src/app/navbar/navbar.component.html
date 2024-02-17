@@ -1,5 +1,21 @@
 <nav class="navbar">
     <ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <li><a routerLink="/bank" class="task-list" class="task-list">Dashboard</a></li>
+
+        <li *ngIf="role !== 'USER'"><a routerLink="/bank/customer" class="task-list" class="task-list">Add New
+                Customer</a></li>
+        <li *ngIf="role !== 'USER'"> <a routerLink="/bank/account" class="task-list" class="task-list">Add New
+                Account</a></li>
+        <li><a routerLink="/bank/transaction" class="task-list" class="task-list">Submit New Transaction</a></li>
+
+    </ul>
+    <app-logout></app-logout>
+</nav>
+=======
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
       <li ><a routerLink="/bank" class="task-list" class="task-list"
         >Dashboard</a
       ></li>
@@ -16,4 +32,9 @@
      
     </ul>
     <app-logout></app-logout>
+<<<<<<< HEAD
   </nav>
+=======
+  </nav>
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef

@@ -43,4 +43,8 @@ public class LoginResponse {
    {
       return this.userId;
    }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef

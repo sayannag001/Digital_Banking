@@ -1,10 +1,23 @@
 import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
 import { HttpClient } from "@angular/common/http";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 import { Transaction } from "../types/Transaction";
 import { Observable } from "rxjs";
 import { Customer } from "../types/Customer";
 import { Account } from "../types/Account";
+<<<<<<< HEAD
+=======
+=======
+import { Observable } from "rxjs";
+import { Customer } from "../types/Customer";
+import { Account } from "../types/Account";
+import { Transaction } from "../types/Transaction";
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 // import { transition } from "@angular/animations";
 
 @Injectable({

@@ -12,9 +12,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/loans")
 public class LoanController {
+<<<<<<< HEAD
     @Autowired
     private LoanService loanService;
 
+=======
+    private final LoanService loanService;
+
+    @Autowired
+    public LoanController(LoanService loanService) {
+        this.loanService = loanService;
+    }
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
 
     @GetMapping
     public ResponseEntity<List<Loan>> getAllLoans() {
@@ -60,4 +69,8 @@ public class LoanController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f1f5fcf2a3bc08b65b6bb7165bc9f206e3fd06ef
