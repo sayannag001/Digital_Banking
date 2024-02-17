@@ -23,3 +23,7 @@ import { EditAccountComponent } from "./components/accountedit/accountedit.compo
   ],
 })
 export class BankModule {}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432

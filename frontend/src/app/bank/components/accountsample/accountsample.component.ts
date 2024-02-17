@@ -10,4 +10,8 @@ import { AccountTS } from '../../types/tstypes/Accountts';
 })
 export class AccountsampleComponent {
    account:AccountTS=new AccountTS("1",500.00,"1");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432

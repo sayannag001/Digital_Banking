@@ -33,6 +33,7 @@ public class CustomerLoginService implements UserDetailsService {
     public Optional<Customers> getUserById(Integer userId) {
         return customerRepository.findById(userId);
     }
+<<<<<<< HEAD
 
     public Customers getUserByName(String useString) {
         Customers oldUser = customerRepository.findByUsername(useString);
@@ -42,6 +43,17 @@ public class CustomerLoginService implements UserDetailsService {
     public Customers createUser(Customers user) {
         Customers oldUser = customerRepository.findByUsername(user.getUsername());
         if (oldUser != null) {
+=======
+    public Customers getUserByName(String useString)
+    {
+        Customers oldUser = customerRepository.findByUsername(useString);
+        return oldUser;
+    }
+    public Customers createUser(Customers user) {
+        Customers oldUser = customerRepository.findByUsername(user.getUsername());
+        if(oldUser != null)
+        {
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
             throw new CustomerAlreadyExistsException("User name Is Unavailable: " + user.getUsername());
 
         }
@@ -50,13 +62,19 @@ public class CustomerLoginService implements UserDetailsService {
     }
 
     public Customers updateUser(Customers user) {
+<<<<<<< HEAD
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
+=======
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
         return customerRepository.save(user);
     }
 
     public void deleteUser(Integer id) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
         customerRepository.deleteById(id);
     }
 
@@ -66,11 +84,20 @@ public class CustomerLoginService implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
+<<<<<<< HEAD
         // ArrayList<String> role = new ArrayList<>();
         // role.add(user.getRole());
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),
                 user.getPassword(),
                 new ArrayList<>());
+=======
+
+        return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                new ArrayList<>()
+        );
+>>>>>>> 52c3c056d67f84a2e4c916ee7f55a11f83fad432
     }
 }
