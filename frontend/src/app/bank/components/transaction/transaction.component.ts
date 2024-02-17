@@ -41,8 +41,18 @@ export class TransactionComponent implements OnInit {
     this.userId =localStorage.getItem("user_id");
     
     
+    if(this.role=='USER'){
+      // this.accounts$ = this.bankService.getAccounts(strUserId);
+      
+    this.accounts$ = this.bankService.getAccountsByUser(this.userId);
+    
+    } else{
       this.accounts$ = this.bankService.getAccounts();
-      console.log(this.accounts$);    
+      console.log(this.accounts$);
+    
+    }
+      console.log(this.accounts$);
+    
     
     this.transactionForm = this.formBuilder.group({
       accounts: ["", Validators.required],
